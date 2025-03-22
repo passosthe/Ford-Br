@@ -1,0 +1,17 @@
+.container__principal {
+    margin-bottom: 2%;
+}
+
+.container__imagem {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2%;
+}
+    
+
+.link__principal {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+   
+  

@@ -1,0 +1,103 @@
+.formulario{
+    display: flex;
+    flex-wrap: wrap; 
+    text-align: left;
+    justify-content: center;
+    padding: 2rem;
+    margin-left: 6rem;
+}
+    
+.imagem{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 30%;
+}
+   
+.caixa__titulo{
+    margin-left: 2%;
+}
+ 
+.titulo {
+   font-family: var(--fonte-principal);
+   color: var(--cor-terciaria); 
+   margin-left: 7%;
+   font-size: 25px;
+}
+
+.subtitulo{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    color: var(--cor-secundaria);
+    margin: 0 30% 1% 7%;
+    font-size: 13px;
+    
+}
+
+form{
+    text-align: left;
+    margin-left: 7%;
+}
+  
+.campo {
+    color: var(--cor-terciaria);
+    font-size: 13px;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+}
+
+label {
+    margin-bottom: 0.1rem; 
+    font-weight: 700; 
+}
+  
+input, select, textarea {
+    outline: none;
+    border-radius: 4px; 
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #000000;   
+    cursor: text;
+}
+ 
+select, option {
+    padding-right: 5em ;
+}
+
+input:focus, select:focus, textarea:focus {
+    background:#eeeded ;
+}
+
+.botao__form {
+    font-size: 1.2em;
+    margin: 2% 0 0 44%;
+    padding: 1% 8%; 
+}
+    
+.nav__input {
+    box-shadow: none;
+}
+   
+
+
+
+   
+
+
+   
+    
+   
+    
+
+   
+    
+
+
+
+   
+    
+
+
+

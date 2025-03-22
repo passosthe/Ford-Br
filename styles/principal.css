@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    
+    --cor-principal: #FFFFFF;
+    --cor-secundaria: #1351d8;
+    --cor-terciaria:  #1b357e;
+    --fonte-principal: "Inter", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--cor-principal);
+    font-family: var(--fonte-principal);
+}
+
+header {
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--cor-principal);
+
+}
+
+.nav__lista{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content:flex-start;
+    padding: 1rem 0;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin: 0 2%;
+}
+
+.logo-principal{
+    max-width: 100px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    font-size: 0.8rem;
+    font-weight: 400;
+    display: inline-block;
+    transition: transform 0.4s;
+}
+    
+.nav__link:hover {
+    color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+.nav__item__form {
+    flex: 0.4;
+    margin-left: auto;
+}
+    
+.nav__input {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: none;
+    border: none;
+    background-color: #EFEFEF;
+    padding: 0.6rem;
+    background-image: url("../assets/img/search-interface-symbol.png");
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    cursor: text;
+}
+  
+main{
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    text-align: center;
+    padding-top: 70px ;
+    flex-direction: column;
+} 
+    
+.rodape {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-principal);
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: auto;
+    text-align: left;
+    padding: 10px;
+}
+
+.rodape__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+   
+.rodape__titulo {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    margin-right: 1%;
+}
+    
+.rodape__links {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+   
+}
+ 
+.logo {
+    max-width: 25px;
+    height: auto;
+}
+
+.icon {
+    border-radius: 7px;
+    max-width: 24px;
+    margin-right: 2px;
+    margin-left: 1px;
+}
+   
+.copyright {
+    margin: 0 auto;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+}
+
+.rodape__logo {
+    margin-left: auto;
+}
+ 
+.checkbox {
+    max-width: 1000px;
+}
+
+.botao {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 1rem 3rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--fonte-principal);
+} 
+
+.botao:hover {
+    background: var(--cor-terciaria);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+@media screen and (max-width:1200px) {
+    .nav__lista {
+        row-gap: 2rem;
+        gap: 0.8em;
+    }
+
+    .nav__item__form {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+     
+    .container__principal {
+        margin-top: 4%;
+    }
+}
+
+@media screen and (max-width:730px) {
+    .container__principal {
+        margin-top: 7%;
+    }
+   
+    .container__tabela {
+    margin: 0 auto;
+    }  
+        
+    table, tr, td {
+    display: block;
+    width: 100%;
+    }
+} 
+
+
+@media screen and (max-width:480px) {
+    
+    .container__principal {
+        margin-top: 11%;
+    }
+    
+    .container__tabela {
+        margin-left: 0;
+        padding: 1em;
+    }
+
+    table, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabela__coluna {
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    td img {
+        max-width: 100%;
+        border-radius: 50px;
+    }
+
+    .tabela__info {
+        align-items: center;
+        gap: 2px;
+    }
+    
+    .tabela__info__texto {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .checkbox {
+        width: 25px;
+        height: 25px;
+        
+    }
+
+    .botao {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .formulario {
+       margin-left: 0;
+       margin-right: 25%;
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza horizontalmente */
+    }
+
+    .campo {
+        width: 100%; /* Ocupa largura total */
+        max-width: 300px;
+    }
+
+    input, select, textarea {
+        width: 100%; /* Elementos ocupam largura total */
+        max-width: 250px;
+    }
+
+    select {
+        padding-right: 1em;
+        
+    }
+
+    .rodape__logo{
+        max-width: 70px;
+        height: auto;
+    }
+     
+    
+     .copyright {
+        order: 1;
+        margin: 0 auto;
+    }  
+}
+        
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+    
+    
+    
+    
+
+
+
+
+
+    
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+   
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+ 
+ 
+  
+    
+
+
+
+
+    
+
+    
+   
+
+
+
+  
+    
+    
+    
+
+   
+
+
+
+  
+   
+    
+    
+    
+   
+   
+
+   
+    
+    
+
+
+
+
+    
+
+    
+
+
+
+
+
+    
+    
+ 
+
+   
+   
+
+
+
+
+
+
+
+/* @media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .cabecalho__menu {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container__tabela {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho__menu__links {
+        font-size: 0.9rem;
+    }
+
+    .apresentacao {
+        margin-top: 140px;
+    }
+
+    .container__botao {
+        width: 100%;
+    }
+} */
