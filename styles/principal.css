@@ -154,15 +154,22 @@ main{
     border-radius: 7px;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: all 0.3s ease;
     font-family: var(--fonte-principal);
+
+    transition: all 0.3s ease;
 } 
 
-.botao:hover {
+.in-mouseover-btn {
     background: var(--cor-terciaria);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }
+
+/* .botao:hover {
+    background: var(--cor-terciaria);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+} */
 
 @media screen and (max-width:1200px) {
     .nav__lista {

@@ -53,10 +53,10 @@
                         <td class="tabela__coluna">
                             <img src="assets/img/XL Cabine.jpg" alt="Ford Ranger XL cabine Simples">
                             <div class="tabela__info">
-                                <input type="checkbox" class="checkbox"/>
+                                <input onclick="clickinput(this,0)" type="checkbox" class="checkbox"/>
                                 <div class="tabela__info__texto">
                                     <strong>Ford Ranger XL CS 2.2 Diesel CS - 2022</strong>
-                                    <p class="preco">Preço: R$ 155.000,00</p>
+                                   
                                 </div>
                             </div>
                         </td>
@@ -65,10 +65,10 @@
                         <td class="tabela__coluna">
                             <img src="assets/img/xls 2.2 diesel.jpg" alt="Ford Ranger XLs 2.2 diesel">
                             <div class="tabela__info">
-                                <input type="checkbox" class="checkbox"/>
+                                <input onclick="clickinput(this,1)" type="checkbox" class="checkbox"/>
                                 <div class="tabela__info__texto">
                                     <strong>Ford Ranger XLS 2.2 Diesel 4x4 AT- 2022</strong>
-                                    <p class="preco">Preço: R$ 170.000,00</p>
+                                    
                                 </div>
                             </div>
                         </td>
@@ -76,18 +76,100 @@
                         <td class="tabela__coluna">
                             <img src="assets/img/storm.jpg" alt="Ford Ranger Storm">
                             <div class="tabela__info">
-                                <input type="checkbox" class="checkbox"/>
+                                <input onclick="clickinput(this,2)" type="checkbox" class="checkbox"/>
                                 <div class="tabela__info__texto">
-                                <strong>Ford Ranger Storm 3.2 Diesel 4x4 AT- 2022</strong>
-                                <p class="preco">Preço: R$ 183.000,00</p>
+                                    <strong>Ford Ranger Storm 3.2 Diesel 4x4 AT- 2022</strong>
+                                    
                                 </div>    
                             </div>
                         </td>
                     </tr>
                 </table>
-                <button type="button" class="botao">Clique aqui</button>
+                <button onclick="exibirComparacao()" id="botao" type="button" class="botao">Comparar Carros</button>
             </div>
         </section>
+
+        <dialog id="dialog-Tabela" >
+            <table>
+                <tr>
+                    <td class="img-dialog"><img id="carro-imagem-1" src="" alt=""></td>
+                    <td class="img-dialog"><img id="carro-imagem-2" src="" alt=""></td>
+                </tr>
+                
+                <tr>
+                    <th>Modelo</th>
+                    <td id="carro-modelo-1"></td>
+                    <td id="carro-modelo-2"></td>
+                </tr>                    
+                
+                <tr>
+                    <th>Altura da caçamba(mm)</th>
+                    <td id="carro-alturaCacamba-1"></td>
+                    <td id="carro-alturaCacamba-2"></td>
+                </tr>                    
+               
+                <tr>
+                    <th>Altura do veículo(mm)</th>
+                    <td id="carro-alturaVeiculo-1"></td>
+                    <td id="carro-alturaVeiculo-2"></td>
+                </tr>                    
+                
+                <tr>
+                    <th>Altura livre do solo(mm)</th>
+                    <td id="carro-alturaLivreSolo-1"></td>
+                    <td id="carro-alturaLivreSolo-2"></td>
+                </tr>                    
+
+                <tr>
+                    <th>Capacidade de carga(kg)</th>
+                    <td id="carro-capacidadeCarga-1"></td>
+                    <td id="carro-capacidadeCarga-2"></td>
+                </tr>                    
+                
+                <tr>
+                    <th>Motor</th>
+                    <td id="carro-motor-1"></td>
+                    <td id="carro-motor-2"></td>
+                </tr>                    
+                
+                <tr>
+                    <th>Potencia(cv)</th>
+                    <td id="carro-potencia-1"></td>
+                    <td id="carro-potencia-2"></td>
+                </tr>                    
+                
+                <tr>
+                    <th>Volume de caçamba(L)</th>
+                    <td id="carro-volumeCacamba-1"></td>
+                    <td id="carro-volumeCacamba-2"></td>
+                </tr>                    
+               
+                <tr>
+                    <th>Roda</th>
+                    <td id="carro-roda-1"></td>
+                    <td id="carro-roda-2"></td>
+                </tr>                    
+                
+                <tr>
+                    <th>Preço</th>
+                    <td id="carro-preco-1"></td>
+                    <td id="carro-preco-2"></td>
+                </tr>                    
+                
+            </table>
+            <button onclick="esconderComparacao()" class="botao">Fechar</button>
+        </dialog>
+       
+        
+                        
+
+        <dialog id="mensagemErro">
+            <img src="./assets/img/erro-de-alerta.png" alt="triangulo vermelho com exclamação no meio">
+            <h1>ERRO!</h1>
+            <p>Selecione apenas 2 carros.</p>
+            <button onclick="esconderComparacao()" class="botao" type="submit">Fechar</button>
+        </dialog>
+        
     </main>
 
     <footer class="rodape">
@@ -120,7 +202,7 @@
             <img class="rodape__logo" src="assets/img/ford-96.png" alt="logo ford">
         </div>
     </footer>
-    
+    <script src="./JavaScript/compare.js"></script>
 </body>
 </html>
                             

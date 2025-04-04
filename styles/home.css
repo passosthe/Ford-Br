@@ -6,6 +6,8 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 2%;
+
+    
 }
     
 
@@ -14,4 +16,27 @@
     color: var(--cor-secundaria);
 }
    
-  
+.carrossel__botao {
+    position: absolute;
+    top: 45%;
+   
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.carrossel__botao:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.botao-anterior {
+    left: 1%
+}
+
+.botao-proximo {
+    right: 1%;
+}

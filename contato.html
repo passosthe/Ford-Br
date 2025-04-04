@@ -50,25 +50,25 @@
                 <p class="subtitulo">Para enviar sua solicitação, dúvida, sugestão ou elogios, por favor, preencha os campos abaixo:</p>
                 
                 
-                <form action="" method="get"">
+                <form class="form-ford" action="" method="get"">
                     <div class="campo">
                         <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="Nome" placeholder="Escreva aqui" required>
+                        <input class='usuario-escreve'  type="text" id="nome" name="Nome" placeholder="Ex: John Lennon" required>
                     </div>
                     
                     <div class="campo">
                         <label for="email">E-mail:</label> 
-                        <input type="email" id="email" name="email" placeholder="Escreva aqui" required>
+                        <input class='usuario-escreve' type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
                     </div>
                     
                     <div class="campo"> 
                         <label for="celular">Celular:</label> 
-                        <input type="tel" id="celular" name="celular" placeholder="Escreva aqui" required>
+                        <input class='usuario-escreve' type="tel" id="celular" name="celular" placeholder="Ex: (xx) xxxxx-xxxx" required>
                     </div>
                     
                     <div class="campo"> 
                         <label for="assunto">Assunto:</label>
-                        <select id="assunto" name="assunto" required>
+                        <select class='usuario-escreve' id="assunto" name="assunto" required>
                             <option selected disabled value="">Selecione</option>
                             <option value="sugestao">Sugestão</option>
                             <option value="duvida">Dúvida</option>
@@ -79,7 +79,7 @@
                     
                     <div class="campo"> 
                         <label for="mensagem">Mensagem:</label>
-                        <textarea row="6" style="height: 10em;" id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+                        <textarea class='usuario-escreve' row="6" style="height: 10em;" id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
                     </div>
                     
                     <button type="submit" class="botao botao__form">Enviar</button>
@@ -119,7 +119,12 @@
             <img class="rodape__logo" src="assets/img/ford-96.png" alt="logo ford">
         </div>
     </footer>
-
+    <script src="./JavaScript/animacao.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script >
+        $('#celular').mask('(00) 00000-0000');
+    </script>
 </body>
 </html>
     

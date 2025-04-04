@@ -63,15 +63,78 @@ td img:hover {
     background: var(--cor-secundaria);
 }
    
+#dialog-Tabela, #mensagemErro {
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+
+    padding: 20px;
+    border: none;
+    border-radius: 16px;
+}
+
+/* Fundo escuro quando o diálogo está aberto */
+#dialog-Tabela::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
 
 
+/* Linhas alternadas */
+#dialog-Tabela tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
 
+/* Imagens dos carros */
+.img-dialog img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     
+    padding: 10%;
+    margin-left: 90%;
+    display: block;
+}
+
+
+/* Destaque para os títulos dos modelos */
+#carro-modelo-1, #carro-modelo-2 {
+    font-weight: bold;
+    color:  #1b357e;
+    font-size: 16px;
+}
+
+/* Alinhamento das imagens */
+.img-dialog {
+    text-align: center;
+    vertical-align: top;
+
+}
+
+/* Destaque para preços */
+#carro-preco-1, #carro-preco-2 {
+    color: #1351d8;
+    font-weight: bold;
+}
     
 
+.botao:hover {
+    background: var(--cor-terciaria);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+} 
 
-   
-   
+@media (max-width: 768px) {
+    #dialog-Tabela {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    #dialog-Tabela td, #dialog-Tabela th {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
     
 
  
