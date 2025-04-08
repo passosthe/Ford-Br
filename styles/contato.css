@@ -126,7 +126,10 @@ select, option {
    justify-content: center;
 }
    
-    
+.checkbox {
+cursor: pointer;
+}
+
    
     
 
