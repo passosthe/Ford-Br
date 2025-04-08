@@ -80,13 +80,31 @@
                     <div class="campo"> 
                         <label for="mensagem">Mensagem:</label>
                         <textarea class='usuario-escreve' row="6" style="height: 10em;" id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+                        
+                        <P>Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A qualquer momento, será possível editar ou remover tais dados. <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank">Termos e condições</a></P>
+                        <div class="checkbox-termos">
+                            <input type="checkbox" id="termos" class="checkbox-obrigatorio"> 
+                            <strong> Sim. Li e concordo com os Termos e Condições.</strong>
+                        </div>
+                        <div class="checkbox-termos">
+                            <input type="checkbox"> 
+                            <strong>Sim. Também quero receber descontos e novidades.</strong>
+                        </div>
+
+
                     </div>
                     
-                    <button type="submit" class="botao botao__form">Enviar</button>
+                    <button type="submit" id="botaoEnviar" class="botao botao__form" onclick="verificacao()" >Enviar</button>
                 </form>
             </div>
         </div>
         
+        <dialog id="dialog-termos">
+            Para enviar o seu contato é necessário concordar com os termos e condições.
+            <button id="dialog-termos-fechar" onclick="fecharDialog()" class="botao btn-fechar">Fechar</button>
+        </dialog>
+        
+       
     </main>
 
     <footer class="rodape">
@@ -125,6 +143,7 @@
     <script >
         $('#celular').mask('(00) 00000-0000');
     </script>
+    <script src="./JavaScript/enviarForm.js" ></script>
 </body>
 </html>
     
